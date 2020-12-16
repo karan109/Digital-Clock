@@ -82,34 +82,6 @@ IF clk = '1' AND clk'EVENT THEN
 END IF;
 END PROCESS;
 
---PROCESS (sec_clk) BEGIN
---IF sec_clk = '1' AND sec_clk'EVENT AND (state = hr_min OR state = min_sec) THEN
---    IF SEC2 = "1001" THEN
---        SEC2 <= "0000";
---        IF SEC1 = "0101" THEN
---            SEC1 <= "0000";
---            IF MIN2 = "1001" THEN
---                MIN2 <= "0000";
---                IF MIN1 = "0101" THEN
---                    MIN1 <= "0000";
---                    IF HR2 = "0011" AND HR1 = "0010" THEN
---                        HR2 <= "0000"; HR1 <= "0000";
---                    ELSIF HR2 = "1001" THEN
---                        HR2 <= "0000"; HR1 <= HR1 + 1;
---                    ELSE HR2 <= HR2 + 1;
---                    END IF;
---                ELSE MIN1 <= MIN1 + 1;
---                END IF;
---            ELSE MIN2 <= MIN2 + 1;
---            END IF;
---        ELSE SEC1 <= SEC1 + 1;
---        END IF;
---    ELSE SEC2 <= SEC2 + 1;
---    END IF;
---END IF;
---END PROCESS;
-
-
 PROCESS(refresh(2 DOWNTO 1))
 BEGIN
     CASE refresh(2 DOWNTO 1) IS
@@ -121,6 +93,7 @@ BEGIN
 END PROCESS;
 
 
+
 PROCESS(blink_clk) BEGIN
 IF blink_clk = '1' AND blink_clk'EVENT THEN
     IF blink_state = '0' THEN blink_state <= '1';
@@ -128,6 +101,7 @@ IF blink_clk = '1' AND blink_clk'EVENT THEN
     END IF;
 END IF;
 END PROCESS;
+
 
 
 PROCESS (sec_clk, b1, b2, b3, b4) BEGIN
