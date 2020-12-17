@@ -5,16 +5,16 @@ use IEEE.numeric_std.all;
 ENTITY clock IS
 PORT(
     clk : IN bit; -- clk is the master clock of the BASYS3 FPGA board with frequency 100 MHz
-    b1 : IN bit; -- Button 1
-    b2 : IN bit; -- Button 2
-    b3 : IN bit; -- Button 3
-    b4 : IN bit; -- Button 4
-    b5 : IN bit; -- Button 5
+    b1 : IN bit; -- Button 1 (To change the display type in time display modes)
+    b2 : IN bit; -- Button 2 (To enter or exit time display modes)
+    b3 : IN bit; -- Button 3 (To increment the digit selected in time setting modes)
+    b4 : IN bit; -- Button 4 (To change the digit selected to set in time setting modes)
+    b5 : IN bit; -- Button 5 (To decrement the digit selected in time setting modes)
     anode : OUT std_logic_vector (3 DOWNTO 0); -- Anode output for the FPGA board 4 digits
     display: OUT std_logic_vector (7 DOWNTO 0)); -- Cathode output for the FPGA board digit
 END clock;
 
-ARCHITECTURE ARCH OF clock IS
+ARCHITECTURE ARCH_MAIN OF clock IS
 
 TYPE state_type IS(hr_min, min_sec, set_hr_1, set_hr_2, set_min_1, set_min_2, set_sec_1, set_sec_2);
 -- Description os states:
@@ -61,8 +61,8 @@ SIGNAL SEC1 : unsigned (3 DOWNTO 0) := "0000"; -- Stores the value of ten's digi
 SIGNAL MIN1 : unsigned (3 DOWNTO 0) := "0000"; -- Stores the value of ten's digit of minutes
 SIGNAL HR1 : unsigned (3 DOWNTO 0) := "0000"; -- Stores the value of ten's digit of hours
 SIGNAL SEC2 : unsigned (3 DOWNTO 0) := "0000"; -- Stores the value of one's digit of seconds
-SIGNAL MIN2 : unsigned (3 DOWNTO 0) := "0000"; -- Stores the value of one's digit of seconds
-SIGNAL HR2 : unsigned (3 DOWNTO 0) := "0000"; -- Stores the value of one's digit of seconds
+SIGNAL MIN2 : unsigned (3 DOWNTO 0) := "0000"; -- Stores the value of one's digit of minutes
+SIGNAL HR2 : unsigned (3 DOWNTO 0) := "0000"; -- Stores the value of one's digit of hours
 
 
 SIGNAL trash : unsigned (3 DOWNTO 0) := "1111"; 
@@ -137,7 +137,7 @@ END IF;
 END PROCESS;
 
 
--- Process sensitive to all inputs
+-- Process sensitive to all buttons and the seconds clock
 PROCESS (sec_clk, b1, b2, b3, b4, b5) BEGIN
     
     -- If state is in time display modes, then only update time after every seconds clock cycle
@@ -351,4 +351,4 @@ display <=
     ELSE no_blink_display;
     -- Display the intended digit in other cases
 
-end ARCH;
+end ARCH_MAIN;
