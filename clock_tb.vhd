@@ -72,23 +72,171 @@ architecture Behavioural of clock_tb is
             begin
                 wait for c_WAIT;
                 r_clk <= '0';
-                --r_input_a <= '0';
-                --r_input_b <= '0';
-                
                 wait for c_WAIT;
                 r_clk <= '1';
-                --r_input_a <= '0';
-                --r_input_b <= '1';
-
                 wait for c_WAIT;
                 r_clk <= '0';
-                --r_input_a <= '1';
-                --r_input_b <= '0';
-
                 wait for c_WAIT;
                 r_clk <= '1';
-                --r_input_a <= '1';
-                --r_input_b <= '1';
+
+                --wait for c_WAIT;
+                --r_input_b2 <= '1';
+                --wait for c_WAIT;
+                --r_input_b3 <= '1';
+                --wait for c_WAIT;
+                --r_input_b3 <= '0';
+                --wait for c_WAIT;
+                --r_input_b3 <= '1';
+                --wait for c_WAIT;
+                --r_input_b4 <= '1';
+                --wait for c_WAIT;
+                --r_input_b4 <= '0';
+                --wait for c_WAIT;
+                --r_input_b3 <= '1';
+                --wait for c_WAIT;
+                --r_input_b3 <= '0';
+                --wait for c_WAIT;
+                --r_input_b3 <= '1';
+
+                --wait for c_WAIT;
+                --r_input_b2 <= '1';
+                --wait for c_WAIT;
+                --r_input_b3 <= '1';
+                --wait for c_WAIT;
+                --r_input_b3 <= '0';
+                --wait for c_WAIT;
+                --r_input_b3 <= '1';
+                --wait for c_WAIT;
+                --r_input_b4 <= '1';
+                --wait for c_WAIT;
+                --r_input_b4 <= '0';
+                --wait for c_WAIT;
+                --r_input_b3 <= '1';
+                --wait for c_WAIT;
+                --r_input_b3 <= '0';
+                --wait for c_WAIT;
+                --r_input_b3 <= '1';
+
+
+                --wait for c_WAIT;
+                --r_input_b2 <= '1';
+                --wait for c_WAIT;
+                --r_input_b3 <= '1';
+                --wait for c_WAIT;
+                --r_input_b3 <= '0';
+                --wait for c_WAIT;
+                --r_input_b3 <= '1';
+                --wait for c_WAIT;
+                --r_input_b4 <= '1';
+                --wait for c_WAIT;
+                --r_input_b4 <= '0';
+                --wait for c_WAIT;
+                --r_input_b3 <= '1';
+                --wait for c_WAIT;
+                --r_input_b3 <= '0';
+                --wait for c_WAIT;
+                --r_input_b3 <= '1';
+
+
+                --wait for c_WAIT;
+                --r_input_b2 <= '1';
+                --wait for c_WAIT;
+                --r_input_b3 <= '1';
+                --wait for c_WAIT;
+                --r_input_b3 <= '0';
+                --wait for c_WAIT;
+                --r_input_b3 <= '1';
+                --wait for c_WAIT;
+                --r_input_b4 <= '1';
+                --wait for c_WAIT;
+                --r_input_b4 <= '0';
+                --wait for c_WAIT;
+                --r_input_b3 <= '1';
+                --wait for c_WAIT;
+                --r_input_b3 <= '0';
+                --wait for c_WAIT;
+                --r_input_b3 <= '1';
+
+
+                --wait for c_WAIT;
+                --r_input_b2 <= '1';
+                --wait for c_WAIT;
+                --r_input_b3 <= '1';
+                --wait for c_WAIT;
+                --r_input_b3 <= '0';
+                --wait for c_WAIT;
+                --r_input_b3 <= '1';
+                --wait for c_WAIT;
+                --r_input_b4 <= '1';
+                --wait for c_WAIT;
+                --r_input_b4 <= '0';
+                --wait for c_WAIT;
+                --r_input_b3 <= '1';
+                --wait for c_WAIT;
+                --r_input_b3 <= '0';
+                --wait for c_WAIT;
+                --r_input_b3 <= '1';
+
+
+                --wait for c_WAIT;
+                --r_input_b2 <= '1';
+                --wait for c_WAIT;
+                --r_input_b3 <= '1';
+                --wait for c_WAIT;
+                --r_input_b3 <= '0';
+                --wait for c_WAIT;
+                --r_input_b3 <= '1';
+                --wait for c_WAIT;
+                --r_input_b4 <= '1';
+                --wait for c_WAIT;
+                --r_input_b4 <= '0';
+                --wait for c_WAIT;
+                --r_input_b3 <= '1';
+                --wait for c_WAIT;
+                --r_input_b3 <= '0';
+                --wait for c_WAIT;
+                --r_input_b3 <= '1';
+
+
+                --wait for c_WAIT;
+                --r_input_b2 <= '1';
+                --wait for c_WAIT;
+                --r_input_b3 <= '1';
+                --wait for c_WAIT;
+                --r_input_b3 <= '0';
+                --wait for c_WAIT;
+                --r_input_b3 <= '1';
+                --wait for c_WAIT;
+                --r_input_b4 <= '1';
+                --wait for c_WAIT;
+                --r_input_b4 <= '0';
+                --wait for c_WAIT;
+                --r_input_b3 <= '1';
+                --wait for c_WAIT;
+                --r_input_b3 <= '0';
+                --wait for c_WAIT;
+                --r_input_b3 <= '1';
+
+                --wait for c_WAIT;
+                --r_input_b2 <= '0';
+                --wait for c_WAIT;
+                --wait for c_WAIT;
+                --wait for c_WAIT;
+                --wait for c_WAIT;
+                --wait for c_WAIT;
+                --wait for c_WAIT;
+                --r_input_b2 <= '1';
+                --wait for c_WAIT;
+                --wait for c_WAIT;
+                --r_input_b3 <= '0';
+                --wait for c_WAIT;
+                --r_input_b3 <= '1';
+                --wait for c_WAIT;
+                --r_input_b4 <= '1';
+                --wait for c_WAIT;
+                --wait for c_WAIT;
+                --r_input_b2 <= '0';
+
 
             end process;
 
