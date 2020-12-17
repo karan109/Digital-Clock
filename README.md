@@ -38,11 +38,13 @@ There are 2 outputs to the digital clock -
 
 State Logic is described and explained in the code
 # VHDL Design Decisions
-I have designed 2 seperate sub-components
+I have designed 2 seperate sub-components along with the main component:
 1. This returns a clock with a given time period multiple of the master clock
 (Used to generate a seconds clock (Time period 1 sec) and blink clock (Time period 0.5 sec))
 2. This return the corresponding 7 segment with dot display, given a 4 bit vector
 (Used to display output)
+
+In the main architecture,
 
 6 separate signals are used to store each digit of the hours, minutes and signals at any point of time
 
